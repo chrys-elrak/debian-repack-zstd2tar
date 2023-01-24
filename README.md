@@ -1,5 +1,4 @@
 # zstd2tar
-[![GitHub release](https://github.com/chrys-elrak/debian-repack-zstd2tar/releases/download/beta/debian-repack-zstd2tar_1.0.0-beta_amd64.deb)](
 
 ## Description
 This package is for my personal use but you can use it if you want. I didn't find authentic name for this package so I named it "zstd2tar" (zstd to tar).
