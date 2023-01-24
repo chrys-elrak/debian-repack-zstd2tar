@@ -1,5 +1,5 @@
 # zstd2tar
-[![GitHub release](https://img.shields.io/github/release/chrys-elrak/zstd2tar.svg)](
+[![GitHub release](https://github.com/chrys-elrak/debian-repack-zstd2tar/releases/download/beta/debian-repack-zstd2tar_1.0.0-beta_amd64.deb)](
 
 ## Description
 This package is for my personal use but you can use it if you want. I didn't find authentic name for this package so I named it "zstd2tar" (zstd to tar).
@@ -9,7 +9,7 @@ So this app will convert the compressed file to ".tar.xz" and then I can install
 
 ## Installation
 
-Download the latest release from [here]() and then run the following command:
+Download the latest release from [here](https://github.com/chrys-elrak/debian-repack-zstd2tar/releases/download/beta/debian-repack-zstd2tar_1.0.0-beta_amd64.deb) and then run the following command:
 
 ```bash
 sudo dpkg -i {package_name}.deb
