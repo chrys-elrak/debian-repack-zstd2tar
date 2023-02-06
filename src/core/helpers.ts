@@ -1,5 +1,5 @@
-import { BrowserWindow, BrowserWindowConstructorOptions } from "electron";
-import fs from "node:fs";
+import { BrowserWindow, BrowserWindowConstructorOptions } from 'electron';
+import fs from 'node:fs';
 export function checkDirectory(...pathDirs: string[]) {
   for (const pathDir of pathDirs) {
     if (!fs.existsSync(pathDir)) {
@@ -9,13 +9,13 @@ export function checkDirectory(...pathDirs: string[]) {
 }
 
 export function isDev() {
-  return process.env.NODE_ENV === "development";
+  return process.env.NODE_ENV === 'development';
 }
 
 export function createWindow(
   preload: string,
   url: string,
-  options: BrowserWindowConstructorOptions = {},
+  options: BrowserWindowConstructorOptions = {}
 ) {
   const mainWindow = new BrowserWindow({
     height: 730,
@@ -25,7 +25,7 @@ export function createWindow(
     webPreferences: {
       preload: preload,
       devTools: isDev(),
-      defaultEncoding: "utf-8",
+      defaultEncoding: 'utf-8',
       webgl: false,
       spellcheck: false,
       enablePreferredSizeMode: true,

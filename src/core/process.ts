@@ -1,6 +1,6 @@
 import child_process, {
   ChildProcessWithoutNullStreams,
-} from "node:child_process";
+} from 'node:child_process';
 export class Process {
   currentProcess: ChildProcessWithoutNullStreams;
 
@@ -12,16 +12,14 @@ export class Process {
     }
   }
 
-  exec(
-    cmd: string,
-  ): Promise<boolean | Error> {
+  exec(cmd: string): Promise<boolean | Error> {
     return new Promise((resolve, reject) => {
       this.currentProcess = child_process.spawn(cmd, [], {
         cwd: this._workingDirectory,
         shell: true,
       });
       console.log(`[${this.currentProcess.pid}] => ${cmd}`);
-      this.currentProcess.on("exit", (code: number) => {
+      this.currentProcess.on('exit', (code: number) => {
         if (code !== 0) {
           return reject(new Error(`Process exited with code ${code || 0}`));
         }
