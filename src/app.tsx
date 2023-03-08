@@ -87,7 +87,6 @@ const App = () => {
     window.electronAPI.onProcessEnd(() => {
       setLoading(false);
       enqueueSnackbar('File successfully loaded', { variant: 'success' });
-      // setOutputFile(outputFile);
     });
     window.electronAPI.onProcessError(() => {
       setLoading(false);
@@ -128,14 +127,6 @@ const App = () => {
         className="hidden"
       />
       <div className="flex items-center justify-center h-screen bg-blue-900 text-white relative">
-        {/* <IconButton className='absolute' id="composition-button"
-                    aria-controls={open ? 'composition-menu' : undefined}
-                    aria-expanded={open ? 'true' : undefined}
-                    aria-haspopup="true"
-                    onClick={handleToggle} ref={anchorRef} >
-                    <SettingsIcon className='text-white' />
-                </IconButton>
-                <PopperMenu setOpen={setOpen} open={open} anchorRef={anchorRef} /> */}
         <div
           ref={divRef}
           className="w-9/12 h-96 border-2 border-dashed border-white-800 justify-center flex-col flex"
