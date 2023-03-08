@@ -6,6 +6,14 @@ I have a problem with "apt" and "apt-get" command when I try to install ".deb" f
 
 So this app will convert the compressed file to ".tar.xz" and then I can install it.
 
+## Preview
+
+![Starting](assets/start.png)
+
+![Converting](assets/screenshot.png)
+
+![Error](assets/error.png)
+
 ## Installation
 
 Download the latest release from [here](https://github.com/chrys-elrak/debian-repack-zstd2tar/releases/download/beta/debian-repack-zstd2tar_1.0.0-beta_amd64.deb) and then run the following command:
