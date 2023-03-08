@@ -42,7 +42,7 @@ const App = () => {
     }
     const f = files[0];
     if (f.type !== 'application/vnd.debian.binary-package') {
-      // TODO: show error
+      enqueueSnackbar('Invalid file type, `application/vnd.debian.binary-package` file type expected', { variant: 'error' });
       return;
     }
     setFile(f);
@@ -184,7 +184,7 @@ const App = () => {
 const container = document.getElementById('app');
 const root = createRoot(container);
 root.render(
-  <SnackbarProvider>
+  <SnackbarProvider autoHideDuration={3000}>
     <App />
   </SnackbarProvider>
 );
