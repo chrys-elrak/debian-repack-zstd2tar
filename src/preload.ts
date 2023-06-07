@@ -21,14 +21,14 @@ contextBridge.exposeInMainWorld(
     onProcessStart: (cb: () => void) => {
       ipcRenderer.on(eCom.PROCESS_START, cb);
     },
-    onProcessEnd: (cb) => {
-      ipcRenderer.on(eCom.PROCESS_END, cb as never);
+    onProcessEnd: (cb: never) => {
+      ipcRenderer.on(eCom.PROCESS_END, cb);
     },
     onProcessCanceled: (cb) => {
-      ipcRenderer.on(eCom.PROCESS_CANCELED, cb as never);
+      ipcRenderer.on(eCom.PROCESS_CANCELED, cb);
     },
-    onProcessError: function (cb): void {
-      ipcRenderer.on(eCom.PROCESS_ERROR, cb as never);
+    onProcessError: (cb: never): void => {
+      ipcRenderer.on(eCom.PROCESS_ERROR, cb);
     },
   })
 );
